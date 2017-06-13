@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>网吧联盟</title>
+    <link rel="stylesheet" href="assets/font/iconfont.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <script type="text/javascript" src="assets/js/zepto.min.js"></script>
+
+    <link rel="stylesheet" href="assets/js/dialog.css">
+    <script type="text/javascript" src="assets/js/dialog.js"></script>
+    <script type="text/javascript" src="assets/js/iscroll.js"></script>
+    <link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+    <script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+    <div class="bindCard">
+        <form class="g-form" method="post" data-posturl="#">
+            <div class="weui_cells">
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">投诉门店</div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <select class="weui_select" name="" onblur="rule.empty($(this),'请选择门店')" data-group-state="false">
+                            <option value="">--请选择--</option>
+                            <option value="1">凯旋店</option>
+                            <option value="2">凯旋店</option>
+                            <option value="3">凯旋店</option>
+                            <option value="4">凯旋店</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">投诉类型</div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <select class="weui_select" name="" onblur="rule.empty($(this),'请选择投诉类型')" data-group-state="false">
+                            <option value="">--请选择--</option>
+                            <option value="1">A型</option>
+                            <option value="2">B型</option>
+                            <option value="3">AB型</option>
+                            <option value="4">O型</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">投诉内容</div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <textarea class="weui_textarea" onkeyup="if(value.length>50) value=value.substr(0,50)" placeholder="请输入投诉内容（不起过50字）"  onblur="rule.empty($(this),'请输入投诉内容')" data-group-state="false"></textarea>
+                    </div>
+                </div>
+
+                <div class="weui_cell">
+                    <div class="weui_cell_hd">上传图片</div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <div class="upimgbox clearfix">
+                            <div id="upfile">
+                                <input type="file">
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="surebtn">
+                <div class="btn">提交</div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    $('#upfile input').change(function(evt){
+            var files = evt.target.files;
+            for(var i = 0, f; f = files[i]; i++){
+                if(!f.type.match('image.*')) continue;
+                
+                var reader = new FileReader();
+                reader.onload = (function(theFile){
+                    return function(e){
+                        $('#upfile').before('<div class="imgli flex-box"><img src="'+e.target.result+'" title="'+theFile.name+'" /><input name="upimg" value="'+e.target.result+'" type="hidden" /><i class="icon-roundclose"></i></div>')
+                    }
+                })(f);
+                reader.readAsDataURL(f);
+            } 
+        }).click(function(e){
+            e.stopPropagation()
+        })
+    $('#upfile').click(function () {
+        $(this).find('input').trigger('click') 
+    })
+    $('body').on({
+        click:function(){
+            $(this).parent().remove()
+        }
+    },'.upimgbox .imgli i')
+    </script>
+</body>
+
+</html>
