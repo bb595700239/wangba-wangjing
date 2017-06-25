@@ -1,67 +1,53 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-touch-fullscreen" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<meta name="screen-orientation" content="portrait">
-	<meta name="x5-orientation" content="portrait">
-	<title>网吧联盟</title>
-	<link rel="stylesheet" href="assets/font/iconfont.css">
-	<link rel="stylesheet" href="assets/css/animate.min.css">
-	<link rel="stylesheet" href="assets/css/base.css">
-	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
-	<script type="text/javascript" src="assets/js/fastclick.js"></script>
-	<link rel="stylesheet" href="assets/js/dialog.css">
-	<script type="text/javascript" src="assets/js/dialog.js"></script>
-	<script type="text/javascript" src="assets/js/iscroll.js"></script>
-	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
-	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/mobile.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>网吧联盟</title>
+    <link rel="stylesheet" href="assets/font/iconfont.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <script type="text/javascript" src="assets/js/zepto.min.js"></script>
+    <script type="text/javascript" src="assets/js/fastclick.js"></script>
+    <link rel="stylesheet" href="assets/js/dialog.css">
+    <script type="text/javascript" src="assets/js/dialog.js"></script>
+    <script type="text/javascript" src="assets/js/iscroll.js"></script>
+    <link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+    <script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/mobile.js"></script>
 </head>
 
 <body>
-	<div class="fixed-bottom usercenter">
-		<div class="my-account clearfix">
+    <div class="fixed-bottom usercenter">
+        <div class="my-account clearfix">
+            <img src="assets/images/usertop.png" class="topbg" alt="">
             <div class="user-info">
                 <div class="userbox"><div class="user-photo"><img src="assets/images/user.jpg" alt="user"></div><i class="icon-crownfill"></i></div>
                 <div class="name">周生生</div>
             </div>
         </div>
-        <div class="weui_cells">
-            <a class="weui_cell" href="#">
-                <i class="icon-presentfill l-icon purple"></i>
-                <div class="weui_cell_bd">
-                我的积分
-                </div>
-                <span class="r-con">您当前拥有300积分</span>
-            </a>
-        </div>
-        <div class="weui_cells">
-
-            <a class="weui_cell" href="#">
-                <i class="icon-vipcard l-icon red"></i>
-                <div class="weui_cell_bd">
-                会员卡
-                </div>
-                <span class="r-con">已绑定卡号：900149889(凯旋店)</span>
-            </a>
-        </div>
+        <ul class="flex-box user-jifen white-bg">
+            <li><div class="tit">我的积分</div><p class="p1 red">2251</p><p class="p2">分</p></li>   
+            <li><div class="tit">我的会员卡</div><p class="p1">452132156452365484</p><p class="p2">僕家店</p></li>  
+        </ul>
         <div class="nav-list nav-list-user weui_cells">
             <a href="prize.html">
-                <div class="con"><i class="icon-midu-choujiang green"></i>我的抽奖</div>
+                <div class="con"><i class="icon-present"></i>我的抽奖</div>
             </a>
-            <a href="couponList.html"><div class="con"><i class="icon-ticket red big"></i>我的优惠券</div></a>
-            <a href="orderList.html"><div class="con"><i class="icon-form blue"></i>我的订单</div></a>
-            <a href="joingameList.html"><div class="con"><i class="icon-friend purple"></i>我的报名</div></a>
-            <a  onclick="$.alert('功能正在发开中')"><div class="con"><i class="icon-llstorereservationbtn blue"></i>我的订座</div><div class="tag">开发中</div></a>
-            <a href="feedbackList.html"><div class="con"><i class="icon-1 yellow"></i>我的投诉</div></a>
+            <a href="couponList.html"><div class="con"><i class="icon-ticket big"></i>我的优惠券</div></a>
+            <a href="orderList.html"><div class="con"><i class="icon-form"></i>我的订单</div></a>
+            <a href="joingameList.html"><div class="con"><i class="icon-friend"></i>我的报名</div></a>
+            <a  onclick="$.alert('功能正在发开中')"><div class="con"><i class="icon-llstorereservationbtn"></i>我的订座</div><div class="tag">开发中</div></a>
+            <a href="feedbackList.html"><div class="con"><i class="icon-1"></i>我的投诉</div></a>
         </div>
         <div class="fix-bottom">
             <a href="index.html" class="fix-b">
@@ -73,7 +59,7 @@
                 <p>我的</p>
             </a>
         </div>
-	</div>
+    </div>
 </body>
 
 </html>

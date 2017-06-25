@@ -26,28 +26,66 @@
 	<script type="text/javascript" src="assets/js/mobile.js"></script>
 </head>
 
-<body>
-	<div class="orderlist">
+<body style="background: -webkit-gradient(linear, 0 0, 0 bottom, from(#b465da), to(#e962a3));">
+	<div>
 		<ul class="g-tab flex-box">
-          <li class="active">已领取</li>
-          <li>已使用</li>
-          <li>已失效</li>
+          <li class="active" data-type="0">已领取</li>
+          <li data-type="1">已使用</li>
+          <li data-type="2">已失效</li>
         </ul>
 	</div>
-    <ul class="g-list orderlist">
+    <ul class="g-list">
         <li class="flex-box">
             <div class="info">
-                <p class="shop">凯旋店</p>
-                <p class="tit ellipsis">雅鱼棋牌下午场免费券</p>
-                <p class="time">有效期：2017.6.1-2017.6.5</p>
+                <p class="tit ellipsis">雅鱼棋牌下午场免费券(凯旋店)</p>
                 <p class="p5">使用范围：仅限于凯旋店使用</p>
+                <p class="p5">有效期：2017.6.1-2017.6.5</p>
             </div>
             <div class="activebox">
-                <p class="p1">去使用</p>
+                <p class="btn-act">去使用</p>
+                <p class="p2">请到收银台撤销</p>
+            </div>
+        </li>
+        <li class="flex-box">
+            <div class="info">
+                <p class="tit ellipsis">雅鱼棋牌下午场免费券(凯旋店)</p>
+                <p class="p5">使用范围：仅限于凯旋店使用</p>
+                <p class="p5">有效期：2017.6.1-2017.6.5</p>
+            </div>
+            <div class="activebox">
+                <p class="btn-act">去使用</p>
                 <p class="p2">请到收银台撤销</p>
             </div>
         </li>
     </ul>
+    <script type="text/javascript">
+    	var appendHtml=function(res,_obj){
+            $.each(res.rows,function(i,item){
+                _obj.append('<li class="flex-box">'+
+            '<div class="info">'+
+                '<p class="tit ellipsis">雅鱼棋牌下午场免费券(凯旋店)</p>'+
+                '<p class="p5">使用范围：仅限于凯旋店使用</p>'+
+                '<p class="p5">有效期：2017.6.1-2017.6.5</p>'+
+            '</div>'+
+            '<div class="activebox">'+
+                '<p class="btn-act">去使用</p>'+
+                '<p class="p2">请到收银台撤销</p>'+
+            '</div>'+
+        '</li>')
+	        })
+        } 
+        var argument={'url' : '#','res' : {'type':$('.g-tab .active').data('type')},'success' : appendHtml,'mainbox':$('.orderlist')}
+        $(function(){ 
+            addData(argument);
+            $(".g-tab li").click(function() {
+            	$(this).parent().find('li').removeClass('active')
+            	$(this).addClass('active')
+                argument.res.type=$(this).data('type');
+                argument.mainbox.empty();
+                addData(argument);
+            });
+        })
+    </script>
 </body>
 
 </html>

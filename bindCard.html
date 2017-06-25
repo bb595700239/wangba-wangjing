@@ -31,10 +31,9 @@
         <form class="g-form" method="post" data-posturl="#">
     		<div class="weui_cells">
                 <div class="weui_cell">
-                    <div class="weui_cell_hd">门店</div>
                     <div class="weui_cell_bd weui_cell_primary">
                         <select class="weui_select" name="" onblur="rule.empty($(this),'请选择门店')" data-group-state="false">
-                            <option value="">--请选择--</option>
+                            <option value="">请选择门店</option>
                             <option value="1">凯旋店</option>
                             <option value="2">凯旋店</option>
                             <option value="3">凯旋店</option>
@@ -43,22 +42,21 @@
                     </div>
                 </div>
                 <div class="weui_cell">
-                    <div class="weui_cell_hd">会员卡号</div>
                     <div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入身份证号/会员卡号" onblur="rule.idcard($(this))" data-group-state="false"></div>
                 </div>
 
-                <div class="weui_cell">
-                    <div class="weui_cell_hd">手机号</div>
-                    <div class="weui_cell_bd weui_cell_primary"><input class="weui_input" id="phone" type="text" placeholder="请输入手机号" onblur="rule.phone($('#phone'))" data-group-state="false"></div>
-                </div>
                 <div class="weui_cell" id="getcode">
+                    <div class="weui_cell_bd weui_cell_primary"><input class="weui_input" id="phone" type="text" placeholder="请输入手机号" onblur="rule.phone($('#phone'))" data-group-state="false"></div>
+                    <a class="btn-send" data-url="sendMsgNew.action?type=1">获取验证码</a>
+                </div>
+                <div class="weui_cell">
                     <div class="weui_cell_bd weui_cell_primary">
                         <input class="weui_input" type="text" onblur="rule.custom($(this),'/^[0-9]{6}$/','短信验证码为6位数字');" placeholder="请输验证码" data-group-state="false">
                     </div>
-                    <a class="btn-send" data-url="sendMsgNew.action?type=1">点击获取验证码</a>
+                    
                 </div>
             </div>
-            <div class="weui_cells_title iblue">我们不会在任何地方泄漏您的个人信息，仅用于校验会员身份信息。</div>
+            <div class="weui_cells_title gray">我们不会在任何地方泄漏您的个人信息，仅用于校验会员身份信息。</div>
             <div class="surebtn">
                 <div class="btn">提交</div>
             </div>
