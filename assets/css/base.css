@@ -332,19 +332,16 @@ body{font-size:14px;background-size: 100% 100%;background:#f3f3f3;max-width: 640
 .joinlist .d2-1{font-size: 13px;color: #999}
 .joinlist .d2-2{font-size: 13px;color: #666}
 
-.goods-list{margin-top: 10px; padding-bottom: 50px;}
-.goods-list .goods-item{width:47%;float:left;background:#fff;margin:0 2%;margin-bottom:10px;overflow: hidden; padding-bottom: 5px; border-radius: 5px; }
+.goods-list{margin-top: 10px; padding-bottom: 10px; background: #fff}
+.goods-list .goods-item{width:47%;float:left;background:#fff;margin:0 2%;margin-bottom:10px;overflow: hidden; padding-bottom: 5px; border-radius: 5px; text-align: center; height: 232px; overflow: hidden;}
 .goods-list .goods-item:nth-child(2n-1){margin-right: 0;}
-.goods-item .goods-img{background-color:#e5e5e5; position: relative; overflow: hidden;}
+.goods-item .goods-img{margin: 10px; position: relative; overflow: hidden; height: 140px;overflow: hidden;}
 .goods-item .goods-img img{ width: 100%; }
-.goods-item .goods-text{height: 40px;overflow: hidden;}
-.goods-item .goods-text a{color:#333333;font-size:13px;padding:5px 5px 0 5px;white-space: normal; overflow: hidden; text-overflow:ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical; line-height: 17px;}
+.goods-item .goods-text{height: 25px;overflow: hidden;}
+.goods-item .goods-text a{color:#333333;font-size:13px;padding:5px 5px 0 5px;white-space: normal; overflow: hidden; text-overflow:ellipsis;display: -webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical; line-height: 17px;}
 .goods-item .goods-jifen,.goods-item .goods-fangshi{font-size: 12px;    padding: 0px 5px 0 5px;}
-.shopbar{height: 50px;background-color: #fff;position: fixed; bottom: 0;left: 0;width: 100%;box-shadow: 0 0px 5px rgba(0,0,0,.3)}
-.shopbar .info{margin: 4px 10px;flex: 1}
-.shopbar .info p{line-height: 20px;}
-.shopbar .info p.p2{font-size: 18px;}
-.shopbar .look{width: 110px; height: 50px; line-height: 50px; color: #fff; background-color: #fe5196;text-align: center;}
+.goods-item .goods-jifen .box{position: relative;display: inline-block;    margin-left: 8px;}
+
 
 
 .cells2{margin: 10px;}
@@ -376,3 +373,9 @@ body{font-size:14px;background-size: 100% 100%;background:#f3f3f3;max-width: 640
 .bindCard{margin: 20px 30px; background: #fff; border-radius: 10px; overflow: hidden; padding:20px 20px 70px; }
 .bindCard .weui_cells{margin-top:0;}
 .bindCard .weui_cells .weui_cell:first-child{border-top:none;}
+
+.shoptop{position: relative;}
+.shoptop .topbox{width: 200px; position: absolute; left: 50%; margin-left: -60px; top: 50%;margin-top: -21px; color: #fff}
+.shoptop .topbox img{width: 40px; position: absolute; left: -50px; top:4px;}
+.shoptop .look{position: absolute; right: 0; top: 45%;width: 90px;}
+.iconjifen{width: 15px; height: 15px;position: absolute;top: 5px; left: -17px}
