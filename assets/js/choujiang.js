@@ -34,25 +34,22 @@ var turnplate={
 			animateTo:angles+1800,
 			duration:6000,
 			callback:function (){
-				var h1="好遗憾呢",h2="下次一定中奖哦",btn="再来一次",state='again';
+				var h1="好遗憾呢",h2="下次一定中奖哦";
 				if(txt.indexOf("谢谢参与")<0){
 					h1="中奖啦";
 					var jiangpin=txt.replace(/[\r\n]/g,"");
 					h2='您获得了'+jiangpin;
-					btn="我要领奖";
-					state="go";
 				}
 				turnplate.bRotate = !turnplate.bRotate;
-				$.confirm('<div class="tit orange">'+h1+'</div>'+
+				$.confirm('<div class="activityui">'+
+					'<div class="tit orange">'+h1+'</div>'+
 					'<div class="con">'+h2+'</div>'+
-					'<div class="btns '+state+'">'+btn+'</div>',[],null,{className:'ui-qiandao ui-choujiang showClose ui-alert',width:'270px',beforeShow:function(e){
+					'<a class="btns look" href="prize.html">查看我的奖品</a><div class="btns again">再来一次</div>'+
+					'</div>',[],null,{className:'ui-qiandao ui-choujiang ui-alert',width:'270px',beforeShow:function(e){
 						var _this=this;
 						e.find('.again').click(function(){
 							_this.hide();$('#tupBtn').click();
 						})
-						e.find('.go').click(function(){
-							_this.hide();$.alert('请稍等')
-						})	
 					}});						
 				
 			}

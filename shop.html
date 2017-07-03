@@ -89,6 +89,25 @@
 	        </symbol>
 	        </defs>
         </svg>
+    <script type="text/javascript">
+    	function lingqu(pro){
+    		$.confirm('<div class="shopui welfareui">'+
+    			'<div class="d1 flex-box"><img src="assets/images/shopli.png" alt="" /></div>'+
+    			'<p class="p1">可口可乐300ml </p>'+
+    			'<p class="p2">发货方式：到店提</p>'+
+    			'<div class="d2"><svg class="iconjifen"><use xlink:href="#jifen"></use></svg>300</div>'+
+    			'<div class="line"></div>'+
+    			'<p class="p4">商品详情</p>'+
+    			'<p class="p5">汽水产品与可口可乐公司的其他饮料产品齐头并进，如今 已经成为美国发展速度领先的主要非酒精饮料产品之一， 并且是全球深</p>'+
+    			'</div>',[{yes:"购买"}],function(type){
+			    if(type=="yes"){
+			    	alert(1)
+					this.hide(); 	
+			    }
+			},{width:300,className:'ui-dialog ui-alert ui-wangjin ui-wangjin-shop'});
+    	}
+    	lingqu()
+    </script>
 </body>
 
 </html>

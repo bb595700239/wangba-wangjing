@@ -35,7 +35,7 @@
                 <p class="time">有效期：2017.6.1-2017.6.5</p>
                 <p class="p5">使用范围：仅限于凯旋店使用</p>
             </div>
-            <div class="activebox activebox2">
+            <div class="activebox activebox2" onclick="lingqu(1)">
                 <p class="p1">立即领取</p>
             </div>
         </li>
@@ -46,7 +46,7 @@
                 <p class="time">有效期：2017.6.1-2017.6.5</p>
                 <p class="p5">使用范围：仅限于凯旋店使用</p>
             </div>
-            <div class="activebox activebox2">
+            <div class="activebox activebox2" onclick="lingqu(2)">
                 <p class="p1">立即领取</p>
             </div>
         </li>
@@ -54,6 +54,17 @@
     <a class="fix-bottom fix-bottom-btn" href="couponList.html">
        	查看我的券
     </a>
+    <script type="text/javascript">
+    	function lingqu(pro){
+    		$.confirm('<div class="welfareui shopui"><p class="p1">雅鱼棋牌下午场免费券（僕家店）</p><p class="p2">使用说明：仅限于僕家店棋牌使用</p><p class="p3">有效期：2017-06-20至2017-07-20</p><div class="line"></div><p class="p4">说明</p><p class="p5">汽水产品与可口可乐公司的其他饮料产品齐头并进，如今 已经成为美国发展速度领先的主要非酒精饮料产品之一， 并且是全球深受青</p></div>',[{yes:"领取"}],function(type){
+			    if(type=="yes"){
+			    	alert(1)
+					this.hide(); 	
+			    }
+			},{width:300,className:'ui-dialog ui-alert ui-wangjin'});
+    	}
+    	lingqu()
+    </script>
 </body>
 
 </html>

@@ -69,25 +69,28 @@
 
         <script type="text/javascript">
         	function join(){
-				$.confirm(
-	                '<div class="weui_cell" style="border:none;padding:0;-webkit-align-items: baseline;">'+
-	                    '<div class="weui_cell_hd">队长：</div>'+
+				$.confirm('<div class="joingameui">'+
+	                '<div class="weui_cell" >'+
+	                    '<div class="weui_cell_hd red">队长：</div>'+
 	                    '<div class="weui_cell_bd weui_cell_primary">'+
 	                       '<div>白平　13588305484</div>'+ 
 	                    '</div>'+
 	                '</div>'+
-	                '<div class="weui_cell" style="border:none;padding:0;-webkit-align-items: baseline;">'+
+	                '<div class="weui_cell">'+
 	                    '<div class="weui_cell_hd">队员：</div>'+
 	                    '<div class="weui_cell_bd weui_cell_primary">'+
 	                       '<div>白平　13588305484</div>'+ 
 	                       '<div>白平　13588305484</div>'+ 
 	                    '</div>'+
+	                '</div>'+
 	                '</div>',[{yes:'确定'}],function(type){
 				    if(type=="yes"){
 				        this.hide();  
 				    }
-				},{className:'ui-qiandao showClose ui-alert',width:'270px'});
+				},{className:'ui-qiandao ui-alert ui-wangjin',width:300});
+
 			}
+			join()
         </script>
 	</div>
 </body>
