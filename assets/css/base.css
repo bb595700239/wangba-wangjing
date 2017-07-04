@@ -194,6 +194,8 @@ body{font-size:14px;background-size: 100% 100%;background:#f3f3f3;max-width: 640
 .gamesteamjoin .btn-add i{font-size: 20px; margin-right: 5px;position: relative;top: 2px;}
 .share .flex-box{padding: 0 2%; margin-top: 20px;}
 .share .flex-box div{-webkit-box-flex: 1; width: 100%; margin: 0 8%;}
+.share .info{position: absolute;top: 9%; width: 100%; font-size: 24px; color: #fff;text-align: center;vertical-align: middle;}
+.share .info span{font-size: 35px;}
 .wangkacenter .rule .con{padding: 10px 0;}
 
 .wangkalist .weui_cell{padding: 15px 10px;}
@@ -249,10 +251,8 @@ body{font-size:14px;background-size: 100% 100%;background:#f3f3f3;max-width: 640
 .banner .turnplate img{width:100%;height:auto;}
 .silider-txt{width:60%;height:30px;line-height: 30px; margin:25px auto;background:rgba(255,255,255,.7);border-radius:15px;text-align: center;}
 .silider-txt p{width:100%;text-align:center;color:#545454;line-height:20px;}
-.activitygame .h2,.activitygame .p2,.activitygame .p3{width:100%;text-align:center;}
-.activitygame .h2{color:#ff7c4e;margin-top:20px;margin-bottom:5px;font-size: 25px;}
-.activitygame .p2{color:#999;font-size:16px;}
-.activitygame .p3{color:#999}
+
+.activitygame .p2{background-image: url(../images/s1.png); background-size: 100% 100%; width: 230px; height: 35px;text-align: center;line-height: 35px;font-size: 17px;color: #fff;position: absolute;top:30%;left: 50%; margin-left: -115px;}
 .ui-choujiang{background-image: url(../images/alertbg.png);    background-color: rgba(0,0,0,0) !important;
     box-shadow: none !important; background-size: 100% auto; background-repeat: no-repeat;}
 .ui-choujiang .tit{font-size: 25px; margin-top: 20px;}
